@@ -10,12 +10,6 @@ const {
 } = process.env;
 
 module.exports = {
-  apps: [
-    {
-      name: "frontend",
-      script : './build/index.html',
-    },
-  ],
   deploy: {
     production: {
       user: DEPLOY_USER,
