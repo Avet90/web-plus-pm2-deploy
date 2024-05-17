@@ -36,8 +36,8 @@ function App() {
   const history = useHistory();
 
 
+  const token = localStorage.getItem("jwt");
   React.useEffect(() => {
-    const token = localStorage.getItem("jwt");
     if (token) {
       api
         .checkToken(token)
@@ -58,7 +58,7 @@ function App() {
           console.log(err);
         });
     }
-  }, [history, token]);
+  }, [history]);
 
 
 
